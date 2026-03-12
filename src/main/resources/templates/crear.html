@@ -1,0 +1,25 @@
+<head xmlns:th="http://www.w3.org/1999/xhtml">
+    <meta charset="UTF-8">
+    <title>Lista de Pedidos</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+
+<h1>Nuevo Pedido</h1>
+<form action="/pedidos/guardar" method="post">
+
+    <label>ID</label>
+    <input type="number" name="id">
+
+    <label>Fecha</label>
+    <input type="date" name="fecha">
+
+    <label>Estado</label>
+    <input type="text" name="estado">
+
+    <label>Total</label>
+    <input type="number" step="0.01" name="total">
+
+    <button type="submit" class="button">Guardar</button>
+    <a href="/pedidos" class="button button-secondary">Cancelar</a>
+
+</form>

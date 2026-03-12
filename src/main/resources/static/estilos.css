@@ -1,0 +1,96 @@
+/* --- Global Text Styles (p, h1-h6) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* --- Label Styles --- */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 2em;
+    color: #555;
+}
+
+/* --- Button Styles --- */
+button, .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    margin-top: 1em;
+}
+
+button:hover, .button:hover {
+    background-color: #0056b3;
+}
+
+.button-secondary {
+    background-color: #6c757d;
+}
+
+.button-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* --- Table Styles --- */
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 30px auto;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+}
+
+td {
+    text-align: center;
+}
+
+/* --- Form Input Styles --- */
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
