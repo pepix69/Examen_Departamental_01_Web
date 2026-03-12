@@ -21,6 +21,11 @@ public class PedidoController {
         pedidos.add(new Pedido(3, LocalDate.now(), "Entregado", 75.30));
     }
 
+    @GetMapping("/")
+    public String inicio() {
+        return "redirect:/pedidos";
+    }
+
     @GetMapping
     public String listar(Model model) {
         model.addAttribute("pedidos", pedidos);
