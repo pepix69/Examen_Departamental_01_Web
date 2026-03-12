@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Pedidos</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+<body>
+<h1>Pedidos</h1>
+
+<a href="/pedidos/nuevo" class="button">Agregar Pedido</a> <br> <br>
+
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+        <th>Total</th>
+        <th>Acciones</th>
+    </tr>
+
+    <tr th:each="p : ${pedidos}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.fecha}"></td>
+        <td th:text="${p.estado}"></td>
+        <td th:text="${p.total}"></td>
+        <td>
+            <a th:href="@{/pedidos/editar/{id}(id=${p.id})}" class="button">Editar</a>
+            <a th:href="@{/pedidos/eliminar/{id}(id=${p.id})}" class="button button-secondary">Eliminar</a>
+        </td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>

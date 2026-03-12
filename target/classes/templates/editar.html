@@ -1,0 +1,20 @@
+<head xmlns:th="http://www.w3.org/1999/xhtml">
+    <meta charset="UTF-8">
+    <title>Lista de Pedidos</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+
+<h1>Nuevo Pedido</h1>
+
+<form action="/pedidos/actualizar" method="post" xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <input type="hidden" name="id" th:value="${pedido.id}">
+
+    Fecha: <input type="date" name="fecha" th:value="${pedido.fecha}">
+    Estado: <input type="text" name="estado" th:value="${pedido.estado}">
+    Total: <input type="number" step="0.01" name="total" th:value="${pedido.total}">
+
+    <button class="button" type="submit">Actualizar</button>
+    <a href="/pedidos" class="button button-secondary">Cancelar</a>
+
+</form>

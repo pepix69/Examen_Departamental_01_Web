@@ -1,0 +1,18 @@
+<head xmlns:th="http://www.w3.org/1999/xhtml">
+    <meta charset="UTF-8">
+    <title>Lista de Pedidos</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+
+<form action="/pedidos/borrar" method="post" xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <input type="hidden" name="id" th:value="${pedido.id}">
+
+    <p>¿Seguro que quieres eliminar este pedido?</p>
+
+    <p th:text="${pedido.id}"></p>
+
+    <button type="submit">Eliminar</button>
+    <a href="/pedidos" class="button button-secondary">Cancelar</a>
+
+</form>
